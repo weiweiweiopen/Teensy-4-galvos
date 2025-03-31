@@ -1,4 +1,6 @@
 # LaserDyeProject
+![47702023542_bf9168e19b_o](https://github.com/user-attachments/assets/f038ca3e-6013-47a2-a172-c22516c4ae91)
+![40788234953_f13df5a4bb_o](https://github.com/user-attachments/assets/0fd4f6e0-4eee-4ea7-8569-28a9c2438982)
 
 ## Description
 The Laser Dye Project merges alternative photography with digital fabrication by producing cyanotype (New Cyanotype and Vandyke Brown) images on sewn garments constructed from natural fibers or delicate and slightly uneven organic substrates through maskless laser exposure with a DIY programmable laser galvanometer system. The maskless development approach also broadens the potential to work with large exposure areas and enables printing with multiple laser machines from different angles.
@@ -7,8 +9,10 @@ This project has won the **Selected Work** title of **YouFab Global Award (2015)
 
 Another related laser dye project, **"If Time Was Wearable and Foldable"**, was a collaboration with fashion designer **Yiyu Chen** and photographer **Bo-Lin Lo**. Yiyu Chen designed a garment with a special square pattern to experiment with the optical properties of laser dye, enabling textile printing with an origami-like structure.
 
-[Project exhibition book download link.
+[Project book download link.
 ]([url](https://archive.org/details/laser-dye-if-time-was-wearable-and-foldable-curatior-and-artist))
+[project video]([url](https://shihweichieh.com/Laser-Dye-Project))
+
 ## Installation
 1. Clone this repository or download the zip files:  
    ```bash
