@@ -9,8 +9,8 @@ This project has won the **Selected Work** title of **YouFab Global Award (2015)
 
 Another related laser dye project, **"If Time Was Wearable and Foldable"**, was a collaboration with fashion designer **Yiyu Chen** and photographer **Bo-Lin Lo**. Yiyu Chen designed a garment with a special square pattern to experiment with the optical properties of laser dye, enabling textile printing with an origami-like structure.
 
-[Project book download link]([url](https://archive.org/details/laser-dye-if-time-was-wearable-and-foldable-curatior-and-artist))
-[project video]([url](https://shihweichieh.com/Laser-Dye-Project))
+[Project book](https://archive.org/details/laser-dye-if-time-was-wearable-and-foldable-curatior-and-artist)
+[Project video](https://shihweichieh.com/Laser-Dye-Project)
 
 ## Installation
 1. Clone this repository or download the zip files:  
