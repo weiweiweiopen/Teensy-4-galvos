@@ -10,12 +10,12 @@ This DIY laser galvonometer projector was designed for [Laser Dye Project](https
 1. Clone this repository or download the zip files:  
    ```bash
    git clone https://github.com/shihweichieh2023/LaserDyeProject.git
-2. Upload the .ino file to teensy 4.1. connected to teensy audio adaptor board.
-3. Open Max/MSP and load the .maxpat patches.
+2. Upload the .ino file to teensy 4.1. that is connected to teensy audio adaptor board.
+4. Open Max/MSP and load the .maxpat patches.
 
 <img width="250" alt="Screenshot 2025-03-31 at 4 45 16 PM" src="https://github.com/user-attachments/assets/30cbdc99-58ab-4cc6-96c7-ae5199936e60"><img width="250" alt="Screenshot 2025-04-01 at 6 45 59 PM" src="https://github.com/user-attachments/assets/0b9dec41-2fbd-4026-80cc-728aa95d1c10">
 
-4. Open "audio status" in the top menu bar, select "Teensy audio" as output device.
+4. Open "audio status" window in the top menu bar, select "Teensy audio" as output device.
 ## The amplifier board
 The amplifier board is simply used for converting the output of teensy audio adaptor board to differential signals to adapt the +/- 5V inputs of the galvonometer system. For more details of ILDA differential signals please visit the references. 
 
