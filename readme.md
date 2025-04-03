@@ -1,10 +1,11 @@
-# Laser Dye Project
+
+#Teensy-4-galvos
+This DIY laser galvonometer projector was originally designed for [Laser Dye Project](https://shihweichieh.com/Laser-Dye-Project) to develop New Cyanotype and Vandyke brown images on sewn garments masklessly. It is also capable for other conventional application like engraving, PCB etching or audio visual performace. The software interface is made with max/msp and teensy code, and the protocol is based on pure audio synthesis, not by ILDA, however the hardware is compatible with ILDA connectors and software too.
+
+## Laser Dye Project
 <img src="https://github.com/user-attachments/assets/f038ca3e-6013-47a2-a172-c22516c4ae91" width="500">
 <img src="https://github.com/user-attachments/assets/0fd4f6e0-4eee-4ea7-8569-28a9c2438982" width="500">
 <img src="https://github.com/user-attachments/assets/157e2703-0284-4cd6-b078-0bb24821dd5d" width="500">
-
-## Description
-This DIY laser galvonometer projector was designed for [Laser Dye Project](https://shihweichieh.com/Laser-Dye-Project) to develop New Cyanotype and Vandyke Brown images on sewn garments masklessly. It is also capable for other conventional application like engraving, PCB etching or audio visual performace. This system (hardware and software) is designed by the audio synthesis in max or puredata, not by ILDA protocal.
 
 ## Installation
 1. Clone this repository or download the zip files:  
