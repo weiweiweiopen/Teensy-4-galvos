@@ -1,5 +1,5 @@
 
-#Teensy-4-galvos
+# Teensy-4-galvos
 This DIY laser galvonometer projector was originally designed for [Laser Dye Project](https://shihweichieh.com/Laser-Dye-Project) to develop New Cyanotype and Vandyke brown images on sewn garments masklessly. It is also capable for other conventional application like engraving, PCB etching or audio visual performace. The software interface is made with max/msp and teensy code, and the protocol is based on pure audio synthesis, not by ILDA, however the hardware is compatible with ILDA connectors and software too.
 
 ## Laser Dye Project
