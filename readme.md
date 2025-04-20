@@ -20,7 +20,7 @@ This DIY laser galvonometer projector was originally designed for [Laser Dye Pro
 ## The amplifier board
 The amplifier board is simply used for converting the output of teensy audio adaptor board to differential signals to adapt the +/- 5V inputs of the galvonometer system. For more details of ILDA differential signals please visit the references. 
 
-<img src="https://github.com/user-attachments/assets/08dd317c-af9e-4438-8b58-dd9819970b0c" width="500">
+<img width="500" alt="截圖 2025-04-20 下午1 11 24" src="https://github.com/user-attachments/assets/93c92fb1-8753-4a95-a3d6-f85e402524bd" />
 
 ## References
 1. [ILDA signal hacking](https://github.com/ffd8/dac_ilda)
