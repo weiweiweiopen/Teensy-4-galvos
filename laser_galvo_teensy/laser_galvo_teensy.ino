@@ -17,7 +17,7 @@ AudioConnection c2(usbIn, 1, peakY, 0);
 AudioConnection c3(usbIn, 0, audioOut, 0);
 AudioConnection c4(usbIn, 1, audioOut, 1);
 
-const int laserPin = 5;
+const int laserPin = 6;
 const float threshold = 0.01;  // Adjust based on noise floor
 bool laserActive = false;
 
