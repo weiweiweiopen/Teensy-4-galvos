@@ -1,10 +1,11 @@
-# Stippling x TSP laser scanning
-This folder contains AI-assisted rapid prototyping tools for image/text to XY laser output.
+# Python Tools
+
+This folder contains the current Python tools for converting images and text into XY laser paths.
 
 ## Tools
 
 - `ld_stippling_qt.py`: main image-to-XY stippling app with preview, export, and playback controls
-- `ld_pathopt_xy.py`: shared path/stipple algorithm module used by the stippling app
+- `ld_pathopt_xy.py`: shared path and stippling algorithm module used by the stippling app
 - `ld_text_outline_qt.py`: text-to-outline XY export tool
 
 ## What each tool is for
@@ -25,7 +26,7 @@ Features:
 Run:
 
 ```bash
-python3 minimal_vibe_model/ld_stippling_qt.py
+python3 python/ld_stippling_qt.py
 ```
 
 Dependencies:
@@ -66,7 +67,7 @@ Features:
 Run:
 
 ```bash
-python3 minimal_vibe_model/ld_text_outline_qt.py
+python3 python/ld_text_outline_qt.py
 ```
 
 Dependencies:
