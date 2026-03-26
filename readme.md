@@ -1,19 +1,18 @@
 # Teensy-4-galvos
 
-DIY laser galvanometer projector tools for Teensy 4.1, Max/MSP, and Python-based XY path generation. The system was developed for the [Laser Dye Project](https://shihweichieh.com/Laser-Dye-Project), but it can also be used for engraving, PCB work, and audio-visual experiments.
+DIY laser galvanometer projector tools for Teensy 4.0, Max/MSP, and Python-based XY path generation. The system was developed for the [Laser Dye Project](https://shihweichieh.com/Laser-Dye-Project), but it can also be used for engraving, PCB work, and audio-visual experiments.
 
 ## Quick Start
 
 1. Clone the repository.
-2. Flash the Teensy 4.1 firmware from `src/`.
-3. Open the Max patch in `max/` and select the Teensy audio device.
-4. Use the Python tools in `python/` if you want to generate XY WAV files from images or text.
+2. Flash the Teensy 4.0 firmware from `src/`.
+3. Open the Max patch in `max/` and select the Teensy audio device. Or use the Python tools in `python/`.
 
 ## Python Tools
 
 The main GUI app is `python/ld_stippling_qt.py`.
 
-Setup:
+Setup on Mac and Linux:
 
 ```bash
 python3 -m venv .venv
