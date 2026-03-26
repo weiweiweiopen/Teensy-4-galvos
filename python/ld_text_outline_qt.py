@@ -15,8 +15,20 @@ from pathlib import Path
 import wave
 
 import numpy as np
-from PIL import Image
-from PySide6 import QtCore, QtGui, QtWidgets
+
+try:
+    from PIL import Image
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing dependency: Pillow. Install with `python3 -m pip install -r python/requirements.txt`."
+    ) from exc
+
+try:
+    from PySide6 import QtCore, QtGui, QtWidgets
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing dependency: PySide6. Install with `python3 -m pip install -r python/requirements.txt`."
+    ) from exc
 
 DEFAULT_FONT_SIZE = 96.0
 

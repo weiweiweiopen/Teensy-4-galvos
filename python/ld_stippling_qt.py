@@ -19,7 +19,13 @@ import json
 import wave
 
 import numpy as np
-from PIL import Image
+
+try:
+    from PIL import Image
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing dependency: Pillow. Install with `python3 -m pip install -r python/requirements.txt`."
+    ) from exc
 
 from ld_pathopt_xy import (
     sample_weighted_dots,
@@ -30,7 +36,12 @@ from ld_pathopt_xy import (
     resample_to_length,
 )
 
-from PySide6 import QtCore, QtGui, QtWidgets
+try:
+    from PySide6 import QtCore, QtGui, QtWidgets
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing dependency: PySide6. Install with `python3 -m pip install -r python/requirements.txt`."
+    ) from exc
 
 try:
     import sounddevice as sd

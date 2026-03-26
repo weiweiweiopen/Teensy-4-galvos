@@ -1,83 +1,41 @@
 # Python Tools
 
-This folder contains the current Python tools for converting images and text into XY laser paths.
+Small GUI tools for turning images or text into XY laser paths.
 
-## Tools
+## Main Files
 
-- `ld_stippling_qt.py`: main image-to-XY stippling app with preview, export, and playback controls
-- `ld_pathopt_xy.py`: shared path and stippling algorithm module used by the stippling app
-- `ld_text_outline_qt.py`: text-to-outline XY export tool
+- `ld_stippling_qt.py`: image to XY preview/export app
+- `ld_text_outline_qt.py`: text outline to XY export app
+- `ld_pathopt_xy.py`: shared sampling and path-optimization code
 
-## What each tool is for
+## Setup
 
-### `ld_stippling_qt.py`
-
-Use this for image-based laser drawing.
-
-Features:
-
-- load bitmap images
-- generate stipple points with `voronoi`, `poisson`, or `random`
-- optional path optimization
-- preview the point cloud and draw order
-- export 2-channel XY WAV
-- direct playback controls for hardware testing
-
-Run:
+macOS / Linux:
 
 ```bash
-python3 python/ld_stippling_qt.py
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r python/requirements.txt
 ```
 
-Dependencies:
-
-- `numpy`
-- `Pillow`
-- `PySide6`
-- `scipy`
-- optional: `sounddevice`
-
-### `ld_pathopt_xy.py`
-
-This is the shared algorithm layer behind the image stippling workflow.
-
-It contains:
-
-- weighted image sampling
-- Voronoi stippling
-- Poisson-disk stippling
-- nearest-neighbor path ordering
-- aspect fitting
-- XY resampling helpers
-
-`ld_stippling_qt.py` imports this file directly, so keep both files together.
-
-### `ld_text_outline_qt.py`
-
-Use this for text-based laser drawing.
-
-Features:
-
-- choose a font
-- enter multiline text
-- convert glyphs to outlines
-- optimize contour ordering
-- export 2-channel XY WAV
-
-Run:
+Windows:
 
 ```bash
-python3 python/ld_text_outline_qt.py
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r python\requirements.txt
 ```
 
-Dependencies:
+## Run
 
-- `numpy`
-- `Pillow`
-- `PySide6`
+```bash
+python python/ld_stippling_qt.py
+python python/ld_text_outline_qt.py
+```
 
 ## Notes
 
-- The old Tk GUI, wrapper scripts, and earlier prototype files were removed.
-- If you move these files, keep `ld_stippling_qt.py` and `ld_pathopt_xy.py` in the same folder unless you also update the import path.
-- Generated outputs like `.wav`, `.npz`, and cache folders should not be committed unless they are intentional examples.
+- Use native Windows Python for audio output; WSL may not detect the laser audio device correctly.
+- `scipy` is important for fast Voronoi rendering on large images.
+- `sounddevice` is only needed for live playback from the GUI.
+- Keep `ld_stippling_qt.py` and `ld_pathopt_xy.py` in the same folder.

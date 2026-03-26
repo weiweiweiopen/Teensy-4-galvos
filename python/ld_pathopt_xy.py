@@ -13,8 +13,67 @@ import wave
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
-from scipy.spatial import cKDTree
+
+try:
+    from PIL import Image
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing dependency: Pillow. Install with `python3 -m pip install -r python/requirements.txt`."
+    ) from exc
+
+try:
+    from scipy.spatial import cKDTree as _SciPyKDTree
+except Exception:
+    _SciPyKDTree = None
+
+
+class _NumpyKDTree:
+    def __init__(self, points: np.ndarray):
+        self.points = np.asarray(points, dtype=np.float32)
+
+    def query(self, points: np.ndarray, k: int = 1, workers: int | None = None):
+        del workers
+        pts = np.asarray(points, dtype=np.float32)
+        single = pts.ndim == 1
+        if single:
+            pts = pts[None, :]
+
+        diff = self.points[None, :, :] - pts[:, None, :]
+        dist2 = np.sum(diff * diff, axis=2)
+
+        if k <= 1:
+            idx = np.argmin(dist2, axis=1)
+            dist = np.sqrt(dist2[np.arange(pts.shape[0]), idx])
+        else:
+            kk = min(int(k), self.points.shape[0])
+            part = np.argpartition(dist2, kth=kk - 1, axis=1)[:, :kk]
+            part_dist2 = np.take_along_axis(dist2, part, axis=1)
+            order = np.argsort(part_dist2, axis=1)
+            idx = np.take_along_axis(part, order, axis=1)
+            dist = np.sqrt(np.take_along_axis(dist2, idx, axis=1))
+
+        if single:
+            return dist[0], idx[0]
+        return dist, idx
+
+
+def _make_kdtree(points: np.ndarray):
+    if _SciPyKDTree is not None:
+        return _SciPyKDTree(points)
+    return _NumpyKDTree(points)
+
+
+def _guard_large_numpy_kdtree(sample_count: int, point_count: int, context: str) -> None:
+    if _SciPyKDTree is not None:
+        return
+    work = int(sample_count) * int(point_count)
+    if work <= 2_000_000:
+        return
+    raise RuntimeError(
+        f"{context} needs fast nearest-neighbor search for this image size. "
+        "Install SciPy with `python3 -m pip install -r python/requirements.txt`, "
+        "or reduce image size / increase pixel step / enable downsample."
+    )
 
 
 def tone_map_weights(ink_values: np.ndarray, density: float, gamma: float, floor: float) -> np.ndarray:
@@ -108,9 +167,10 @@ def weighted_voronoi_stipple_points(
     samples = np.column_stack((cols[valid].astype(np.float32), rows[valid].astype(np.float32)))
     sample_w = weights[valid]
     l = float(np.clip(lerp, 0.0, 1.0))
+    _guard_large_numpy_kdtree(samples.shape[0], k, "Voronoi stippling")
 
     for _ in range(max(1, int(iterations))):
-        tree = cKDTree(points)
+        tree = _make_kdtree(points)
         owners = tree.query(samples, workers=-1)[1]
 
         wsum = np.bincount(owners, weights=sample_w, minlength=k)
@@ -240,7 +300,9 @@ def nearest_neighbor_order(points: np.ndarray, start_index: int = 0) -> np.ndarr
     if n <= 2:
         return np.arange(n, dtype=np.int32)
 
-    tree = cKDTree(points)
+    _guard_large_numpy_kdtree(n, min(8, n), "Path optimization")
+
+    tree = _make_kdtree(points)
     visited = np.zeros(n, dtype=bool)
     order = np.empty(n, dtype=np.int32)
     cur = int(np.clip(start_index, 0, n - 1))
