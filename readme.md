@@ -2,13 +2,6 @@
 
 DIY laser galvanometer projector tools for Teensy 4.1, Max/MSP, and Python-based XY path generation. The system was developed for the [Laser Dye Project](https://shihweichieh.com/Laser-Dye-Project), but it can also be used for engraving, PCB work, and audio-visual experiments.
 
-## What is in this repo
-
-- `src/`: Teensy firmware
-- `max/`: Max/MSP patches for playback and control
-- `python/`: image/text to XY waveform tools
-- `kicad/`: hardware design files
-
 ## Quick Start
 
 1. Clone the repository.
