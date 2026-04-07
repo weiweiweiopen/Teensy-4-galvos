@@ -30,6 +30,8 @@ except ModuleNotFoundError as exc:
         "Missing dependency: PySide6. Install with `python3 -m pip install -r python/requirements.txt`."
     ) from exc
 
+from qt_classic_mac import apply_classic_mac_theme, make_section_label
+
 DEFAULT_FONT_SIZE = 96.0
 
 
@@ -284,14 +286,21 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _build_ui(self) -> None:
         central = QtWidgets.QWidget()
+        central.setObjectName("ClassicCentral")
         self.setCentralWidget(central)
         layout = QtWidgets.QHBoxLayout(central)
+        layout.setContentsMargins(14, 14, 14, 14)
+        layout.setSpacing(14)
 
         left = QtWidgets.QWidget()
+        left.setObjectName("SidebarPanel")
         left.setFixedWidth(430)
         form = QtWidgets.QVBoxLayout(left)
+        form.setContentsMargins(14, 14, 14, 14)
+        form.setSpacing(10)
         layout.addWidget(left)
 
+        form.addWidget(make_section_label("Actions"))
         row1 = QtWidgets.QHBoxLayout()
         self.btn_render = QtWidgets.QPushButton("Render Preview")
         self.btn_export = QtWidgets.QPushButton("Export WAV")
@@ -304,6 +313,7 @@ class MainWindow(QtWidgets.QMainWindow):
         row2.addWidget(self.btn_save_preview)
         form.addLayout(row2)
 
+        form.addWidget(make_section_label("Typography"))
         self.font_combo = QtWidgets.QFontComboBox()
         self.font_combo.setFontFilters(QtWidgets.QFontComboBox.FontFilter.ScalableFonts)
         self.font_style_combo = QtWidgets.QComboBox()
@@ -320,6 +330,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.show_path = QtWidgets.QCheckBox(); self.show_path.setChecked(True)
         self.paragraph_align = QtWidgets.QComboBox(); self.paragraph_align.addItems(["left", "center", "right", "justify"])
 
+        form.addWidget(make_section_label("Output"))
         self.sample_rate = QtWidgets.QSpinBox(); self.sample_rate.setRange(8000, 192000); self.sample_rate.setValue(44100)
         self.points_per_sec = QtWidgets.QSpinBox(); self.points_per_sec.setRange(1, 200000); self.points_per_sec.setValue(150)
         self.point_step = QtWidgets.QSpinBox(); self.point_step.setRange(1, 20); self.point_step.setValue(1)
@@ -330,7 +341,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
         def row(label: str, widget: QtWidgets.QWidget):
             h = QtWidgets.QHBoxLayout()
-            h.addWidget(QtWidgets.QLabel(label))
+            text = QtWidgets.QLabel(label)
+            text.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight | QtCore.Qt.AlignmentFlag.AlignVCenter)
+            text.setFixedWidth(132)
+            h.addWidget(text)
             h.addWidget(widget, 1)
             form.addLayout(h)
 
@@ -340,7 +354,7 @@ class MainWindow(QtWidgets.QMainWindow):
         row("Kerning", self.kerning)
         row("Tracking", self.tracking)
         row("Paragraph Align", self.paragraph_align)
-        form.addWidget(QtWidgets.QLabel("Text (multiline)"))
+        form.addWidget(make_section_label("Text"))
         form.addWidget(self.text_edit)
         row("Optimize Path", self.optimize_path)
         row("Pathfinder Unite", self.unite_paths)
@@ -354,9 +368,13 @@ class MainWindow(QtWidgets.QMainWindow):
         row("Resample", self.resample_mode)
 
         self.status = QtWidgets.QLabel("Ready")
+        self.status.setObjectName("InfoLabel")
         self.time_info = QtWidgets.QLabel("Estimated print time: -")
+        self.time_info.setObjectName("InfoLabel")
         self.pps_info = QtWidgets.QLabel("Actual points/sec: -")
+        self.pps_info.setObjectName("InfoLabel")
         self.export_info = QtWidgets.QLabel("Last export: -")
+        self.export_info.setObjectName("InfoLabel")
         form.addWidget(self.status)
         form.addWidget(self.time_info)
         form.addWidget(self.pps_info)
@@ -364,8 +382,8 @@ class MainWindow(QtWidgets.QMainWindow):
         form.addStretch(1)
 
         self.preview = QtWidgets.QLabel("Preview")
+        self.preview.setObjectName("PreviewFrame")
         self.preview.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.preview.setStyleSheet("background:#ffffff;")
         layout.addWidget(self.preview, 1)
 
         self.btn_render.clicked.connect(self.on_render)
@@ -525,6 +543,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 def main() -> None:
     app = QtWidgets.QApplication([])
+    apply_classic_mac_theme(app)
     win = MainWindow()
     win.show()
     app.exec()

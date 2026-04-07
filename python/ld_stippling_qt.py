@@ -43,6 +43,8 @@ except ModuleNotFoundError as exc:
         "Missing dependency: PySide6. Install with `python3 -m pip install -r python/requirements.txt`."
     ) from exc
 
+from qt_classic_mac import apply_classic_mac_theme, make_section_label
+
 try:
     import sounddevice as sd
 except Exception:  # pragma: no cover
@@ -304,13 +306,16 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _build_ui(self) -> None:
         central = QtWidgets.QWidget()
+        central.setObjectName("ClassicCentral")
         self.setCentralWidget(central)
         layout = QtWidgets.QHBoxLayout(central)
+        layout.setContentsMargins(14, 14, 14, 14)
 
         splitter = QtWidgets.QSplitter(QtCore.Qt.Orientation.Horizontal)
         layout.addWidget(splitter)
 
         self.left = QtWidgets.QWidget()
+        self.left.setObjectName("SidebarPanel")
         self.left.setMinimumWidth(360)
         self.left.setMaximumWidth(520)
         form_layout = QtWidgets.QVBoxLayout(self.left)
@@ -323,6 +328,7 @@ class MainWindow(QtWidgets.QMainWindow):
         left_scroll.setWidget(self.left)
         splitter.addWidget(left_scroll)
 
+        form_layout.addWidget(make_section_label("Image"))
         btn_row1 = QtWidgets.QHBoxLayout()
         self.btn_load = QtWidgets.QPushButton("Load Image")
         self.btn_render = QtWidgets.QPushButton("Render Preview")
@@ -337,6 +343,7 @@ class MainWindow(QtWidgets.QMainWindow):
         btn_row2.addWidget(self.btn_save_preview)
         form_layout.addLayout(btn_row2)
 
+        form_layout.addWidget(make_section_label("Audio"))
         audio_top = QtWidgets.QHBoxLayout()
         self.power = QtWidgets.QPushButton("Power")
         self.power.setCheckable(True)
@@ -380,6 +387,7 @@ class MainWindow(QtWidgets.QMainWindow):
         btn_row3.addWidget(self.btn_load_params)
         form_layout.addLayout(btn_row3)
 
+        form_layout.addWidget(make_section_label("Presets"))
         btn_row4 = QtWidgets.QHBoxLayout()
         self.btn_batch = QtWidgets.QPushButton("Batch Export")
         self.btn_preset_fast = QtWidgets.QPushButton("Preset: Fast")
@@ -395,9 +403,12 @@ class MainWindow(QtWidgets.QMainWindow):
         form_layout.addLayout(btn_row5)
 
         self.path_label = QtWidgets.QLabel("No image loaded")
+        self.path_label.setObjectName("PathLabel")
         form_layout.addWidget(self.path_label)
 
         self.controls: dict[str, QtWidgets.QWidget] = {}
+
+        form_layout.addWidget(make_section_label("Render Settings"))
 
         def add_spin(label: str, key: str, minv: int, maxv: int, v: int):
             w = QtWidgets.QSpinBox(); w.setRange(minv, maxv); w.setValue(v)
@@ -439,9 +450,13 @@ class MainWindow(QtWidgets.QMainWindow):
         add_check("Show Path Lines", "show_path", False)
 
         self.status = QtWidgets.QLabel("Ready")
+        self.status.setObjectName("InfoLabel")
         self.time_info = QtWidgets.QLabel("Estimated print time: -")
+        self.time_info.setObjectName("InfoLabel")
         self.pps_info = QtWidgets.QLabel("Actual points/sec: -")
+        self.pps_info.setObjectName("InfoLabel")
         self.export_info = QtWidgets.QLabel("Last export: -")
+        self.export_info.setObjectName("InfoLabel")
         form_layout.addWidget(self.status)
         form_layout.addWidget(self.time_info)
         form_layout.addWidget(self.pps_info)
@@ -449,8 +464,8 @@ class MainWindow(QtWidgets.QMainWindow):
         form_layout.addStretch(1)
 
         self.preview = QtWidgets.QLabel("Preview")
+        self.preview.setObjectName("PreviewFrame")
         self.preview.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.preview.setStyleSheet("background:#ffffff;")
         splitter.addWidget(self.preview)
         splitter.setStretchFactor(0, 0)
         splitter.setStretchFactor(1, 1)
@@ -491,7 +506,10 @@ class MainWindow(QtWidgets.QMainWindow):
     @staticmethod
     def _add_form_row(layout: QtWidgets.QVBoxLayout, label: str, widget: QtWidgets.QWidget) -> None:
         row = QtWidgets.QHBoxLayout()
-        row.addWidget(QtWidgets.QLabel(label))
+        text = QtWidgets.QLabel(label)
+        text.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight | QtCore.Qt.AlignmentFlag.AlignVCenter)
+        text.setFixedWidth(132)
+        row.addWidget(text)
         row.addWidget(widget, 1)
         layout.addLayout(row)
 
@@ -901,6 +919,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 def main() -> None:
     app = QtWidgets.QApplication([])
+    apply_classic_mac_theme(app)
     win = MainWindow()
     win.show()
     app.exec()
