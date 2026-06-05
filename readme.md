@@ -38,3 +38,5 @@ Notes:
 - Use native Windows Python for audio output; WSL may not see the laser audio device correctly.
 - `scipy` is recommended for fast Voronoi rendering on large images.
 - `sounddevice` is only needed for direct audio playback from the Python GUI.
+
+you may purchase the ready made machine here: https://weiweiweishop2.myshopify.com/
