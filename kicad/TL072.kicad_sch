@@ -2508,7 +2508,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 204.47 94.742 90)
 			(effects
 				(font
@@ -2542,7 +2542,7 @@
 			(uuid "d5809d77-aae8-4dab-8c61-d79ba187a40c")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R13")
 					(unit 1)
@@ -2607,7 +2607,7 @@
 			(uuid "9a11b93a-48fc-4692-b02e-f3318aa48d1b")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#PWR010")
 					(unit 1)
@@ -2692,7 +2692,7 @@
 			(uuid "04908c44-f491-4726-8e97-e765ec7750bb")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "U3")
 					(unit 2)
@@ -2764,7 +2764,7 @@
 			(uuid "2b23a08e-fef2-4187-8f8e-c98513269b50")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "J5")
 					(unit 1)
@@ -2829,7 +2829,7 @@
 			(uuid "29c97259-f42e-4aae-ac7e-0d939aedf04a")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#PWR07")
 					(unit 1)
@@ -2914,7 +2914,7 @@
 			(uuid "75e33e4d-df5b-4967-8a19-8a1e7053e411")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "U2")
 					(unit 2)
@@ -2947,7 +2947,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 158.75 116.332 90)
 			(effects
 				(font
@@ -2981,7 +2981,7 @@
 			(uuid "57cfb419-3110-4405-8a3a-948a55b73166")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R8")
 					(unit 1)
@@ -3014,7 +3014,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 158.75 71.882 90)
 			(effects
 				(font
@@ -3048,7 +3048,7 @@
 			(uuid "c89aa9b4-09e1-4421-964d-c1219c14f122")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R6")
 					(unit 1)
@@ -3133,7 +3133,7 @@
 			(uuid "11fdcd34-ac11-4b52-bad7-91cb07cb3c51")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "U1")
 					(unit 1)
@@ -3168,7 +3168,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 104.648 118.11 90)
 			(effects
 				(font
@@ -3202,7 +3202,7 @@
 			(uuid "18a05ab2-f824-4ae0-9e25-ab361eba83df")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R2")
 					(unit 1)
@@ -3268,7 +3268,7 @@
 			(uuid "0ddd1519-9e07-4487-a5bc-f1270cf0b7ff")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#FLG03")
 					(unit 1)
@@ -3301,7 +3301,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 177.8 79.502 90)
 			(effects
 				(font
@@ -3335,7 +3335,7 @@
 			(uuid "63743a3a-941a-4f89-98d1-25f0f3d04740")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R9")
 					(unit 1)
@@ -3368,7 +3368,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 177.8 123.952 90)
 			(effects
 				(font
@@ -3402,7 +3402,7 @@
 			(uuid "f2f85ec5-91d2-44e8-8e7e-f3eb7c43ca11")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R10")
 					(unit 1)
@@ -3481,7 +3481,7 @@
 			(uuid "045732f0-d29e-4f68-93ed-82db7d4479c5")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "J2")
 					(unit 1)
@@ -3514,7 +3514,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 204.47 69.342 90)
 			(effects
 				(font
@@ -3548,7 +3548,7 @@
 			(uuid "9ea5a3e7-7e70-42f8-bf3f-eab14c142c4b")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R12")
 					(unit 1)
@@ -3581,7 +3581,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 129.54 70.612 90)
 			(effects
 				(font
@@ -3615,7 +3615,7 @@
 			(uuid "33a49cc8-2f7a-40b4-b159-c00ee3b7af71")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R3")
 					(unit 1)
@@ -3648,7 +3648,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 204.47 113.792 90)
 			(effects
 				(font
@@ -3682,7 +3682,7 @@
 			(uuid "c70c2413-e3ef-49d2-b4c1-e730de910575")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R14")
 					(unit 1)
@@ -3747,7 +3747,7 @@
 			(uuid "f2748a0c-7058-435a-85b3-e5f67b2286e9")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#PWR06")
 					(unit 1)
@@ -3780,7 +3780,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 158.75 92.202 90)
 			(effects
 				(font
@@ -3814,7 +3814,7 @@
 			(uuid "330f9078-1b44-48d7-9f3c-5550e8ffabac")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R7")
 					(unit 1)
@@ -3879,7 +3879,7 @@
 			(uuid "f6e24f3c-2c9f-459c-a1af-9c17395c2272")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#PWR011")
 					(unit 1)
@@ -3951,7 +3951,7 @@
 			(uuid "335e03cd-67ef-45d2-965a-816c23df4b97")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "J6")
 					(unit 1)
@@ -4016,7 +4016,7 @@
 			(uuid "4f173401-afba-4a4a-bd4a-95c7f8341f9f")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#PWR08")
 					(unit 1)
@@ -4101,7 +4101,7 @@
 			(uuid "ff7e1d08-7aff-4a4b-a0fc-a0a908d5110a")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "U1")
 					(unit 2)
@@ -4186,7 +4186,7 @@
 			(uuid "706a8d4a-de24-452f-9def-26c296854e52")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "U3")
 					(unit 1)
@@ -4219,7 +4219,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 204.47 50.292 90)
 			(effects
 				(font
@@ -4253,7 +4253,7 @@
 			(uuid "adbf8739-ebad-4e8a-8b29-b9125871b99b")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R11")
 					(unit 1)
@@ -4289,7 +4289,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 104.648 72.39 90)
 			(effects
 				(font
@@ -4323,7 +4323,7 @@
 			(uuid "2efe2ae8-452c-48d5-bd4a-3433277c51bc")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R1")
 					(unit 1)
@@ -4395,7 +4395,7 @@
 			(uuid "7b93caae-6c40-4563-9295-da2918022f78")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "RV1")
 					(unit 1)
@@ -4428,7 +4428,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 158.75 47.752 90)
 			(effects
 				(font
@@ -4462,7 +4462,7 @@
 			(uuid "f3131761-75d8-41d7-af25-118f909368f0")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R5")
 					(unit 1)
@@ -4495,7 +4495,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 129.54 116.332 90)
 			(effects
 				(font
@@ -4529,7 +4529,7 @@
 			(uuid "6b1b52c8-c481-4fca-98e2-69b620a29a30")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "R4")
 					(unit 1)
@@ -4594,7 +4594,7 @@
 			(uuid "24a9a28d-afdc-4ae6-958b-f9f245a90363")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "#PWR09")
 					(unit 1)
@@ -4666,7 +4666,7 @@
 			(uuid "cf09e9aa-725d-467e-a281-21352441a07a")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "RV2")
 					(unit 1)
@@ -4751,7 +4751,7 @@
 			(uuid "b609d291-3b72-4153-9cf4-3c2b0754696a")
 		)
 		(instances
-			(project "teensy 4.1 laser"
+			(project "teensy-4-galvos"
 				(path "/a482f7a8-c6b1-4177-8f46-04920beda042/6d17ce7a-96b0-4268-8807-23a23df5693a"
 					(reference "U2")
 					(unit 1)
