@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 536.0, 221.0, 1287.0, 782.0 ],
+		"rect" : [ 446.0, 118.0, 1203.0, 539.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -213,15 +213,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-82",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 482.0, 82.0, 35.0 ],
+					"patching_rect" : [ 188.0, 482.0, 82.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.689965665340424, 272.0, 103.030301168560982, 22.0 ],
-					"text" : "dim 1138 1131"
+					"text" : "dim 1 1"
 				}
 
 			}
@@ -726,7 +725,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 375.0, 704.0, 90.0, 22.0 ],
-					"text" : "dim 759718 1"
+					"text" : "dim 1000 1"
 				}
 
 			}
@@ -1086,7 +1085,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 245.0, 225.5, 60.0, 22.0 ],
-													"text" : "0.993849"
+													"text" : "1."
 												}
 
 											}
@@ -8475,8 +8474,8 @@
 					"id" : "obj-88",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 15.0, 596.333332121372223, 92.0, 22.0 ],
 					"text" : "xray.jit.cellvalue"
 				}
@@ -8487,8 +8486,8 @@
 					"id" : "obj-43",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 26.0, 529.133772969245911, 233.0, 22.0 ],
 					"text" : "xray.jit.cellcoords @plane 0 @out_mode 1"
 				}
@@ -11029,15 +11028,7 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [ 			{
-				"name" : "xray.jit.cellcoords.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "xray.jit.cellvalue.mxo",
-				"type" : "iLaX"
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "rnbodefault",

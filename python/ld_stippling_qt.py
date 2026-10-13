@@ -173,8 +173,6 @@ def compute_xy_for_image(image_path: Path, p: dict) -> RenderResult:
             mode=p["resample_mode"],
         )
 
-    x *= 0.75
-    y *= 0.75
     actual_pps = contour_points * sr / max(1, x.shape[0])
     return RenderResult(
         image_size=(w, h),
@@ -186,9 +184,10 @@ def compute_xy_for_image(image_path: Path, p: dict) -> RenderResult:
     )
 
 
-def result_to_xybuffer(result: RenderResult, sample_rate: int) -> XYBuffer:
+def result_to_xybuffer(result: RenderResult, sample_rate: int, projection_range: float) -> XYBuffer:
     n = min(result.x.shape[0], result.y.shape[0])
-    data = np.stack([result.x[:n], result.y[:n]], axis=1).astype(np.float32)
+    scale = max(0.0, min(1.0, float(projection_range)))
+    data = (np.stack([result.x[:n], result.y[:n]], axis=1) * scale).astype(np.float32)
     return XYBuffer(data=np.clip(data, -1.0, 1.0), sample_rate=sample_rate)
 
 
@@ -444,6 +443,7 @@ class MainWindow(QtWidgets.QMainWindow):
         add_spin("Points/sec", "points_per_second", 1, 200000, 150)
         add_spin("Dot Dwell", "dot_dwell", 1, 100, 1)
         add_dspin("Target Sec (0=off)", "target_seconds", 0.0, 3600.0, 0.0, 0.1)
+        add_dspin("Projection Range", "projection_range", 0.0, 1.0, 1.0, 0.01)
         add_combo("Resample", "resample_mode", ["hold", "linear"], "hold")
         add_dspin("Tone Gamma", "tone_gamma", 0.05, 8.0, 1.0, 0.05)
         add_dspin("Tone Floor", "tone_floor", 0.0, 1.0, 0.0, 0.01)
@@ -486,6 +486,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.btn_projection.clicked.connect(self._start_projection_range)
         self.btn_play.clicked.connect(self._start_playback)
         self.btn_stop.clicked.connect(self._stop_playback)
+        self.controls["projection_range"].valueChanged.connect(self._on_projection_range_changed)
 
         self._apply_widget_sizing()
 
@@ -500,8 +501,18 @@ class MainWindow(QtWidgets.QMainWindow):
 
         for w in combos + spins:
             w.setMinimumHeight(30)
+            w.installEventFilter(self)
         for w in checks:
             w.setMinimumHeight(24)
+
+    def eventFilter(self, obj: QtCore.QObject, event: QtCore.QEvent) -> bool:
+        if (
+            event.type() == QtCore.QEvent.Type.Wheel
+            and isinstance(obj, (QtWidgets.QAbstractSpinBox, QtWidgets.QComboBox))
+        ):
+            event.ignore()
+            return True
+        return super().eventFilter(obj, event)
 
     @staticmethod
     def _add_form_row(layout: QtWidgets.QVBoxLayout, label: str, widget: QtWidgets.QWidget) -> None:
@@ -534,6 +545,7 @@ class MainWindow(QtWidgets.QMainWindow):
             "points_per_second": c["points_per_second"].value(),
             "dot_dwell": c["dot_dwell"].value(),
             "target_seconds": c["target_seconds"].value(),
+            "projection_range": c["projection_range"].value(),
             "resample_mode": c["resample_mode"].currentText(),
             "tone_gamma": c["tone_gamma"].value(),
             "tone_floor": c["tone_floor"].value(),
@@ -564,13 +576,33 @@ class MainWindow(QtWidgets.QMainWindow):
             if d.get("max_output_channels", 0) > 0:
                 self.device_combo.addItem(f"{i}: {d['name']} (out {d['max_output_channels']})", i)
 
+    def _projection_range(self) -> float:
+        return float(self.controls["projection_range"].value())
+
+    def _update_audio_buffers(self) -> None:
+        if self.last_result is None:
+            return
+        sr = self.controls["sample_rate"].value()
+        self.play_xy = result_to_xybuffer(self.last_result, sr, self._projection_range())
+        self.range_xy = make_projection_range(self.play_xy)
+
+    def _on_projection_range_changed(self, value: float) -> None:
+        del value
+        mode = self.play_mode
+        index = self.play_index
+        self._update_audio_buffers()
+        if mode == "range" and self.range_xy is not None:
+            self.active_xy = self.range_xy
+            self.play_index = min(index, max(0, self.range_xy.data.shape[0] - 1))
+        elif mode == "main" and self.play_xy is not None:
+            self.active_xy = self.play_xy
+            self.play_index = min(index, max(0, self.play_xy.data.shape[0] - 1))
+
     def _sync_audio_buffers(self) -> bool:
         if self.last_result is None:
             QtWidgets.QMessageBox.information(self, "No render", "Please render preview first")
             return False
-        sr = self.controls["sample_rate"].value()
-        self.play_xy = result_to_xybuffer(self.last_result, sr)
-        self.range_xy = make_projection_range(self.play_xy)
+        self._update_audio_buffers()
         return True
 
     def _on_power(self, on: bool) -> None:
@@ -771,8 +803,7 @@ class MainWindow(QtWidgets.QMainWindow):
             return
 
         self.last_result = result
-        self.play_xy = result_to_xybuffer(result, self.controls["sample_rate"].value())
-        self.range_xy = make_projection_range(self.play_xy)
+        self._update_audio_buffers()
         qimg: QtGui.QImage = preview
         pix = QtGui.QPixmap.fromImage(qimg)
         self.preview.setPixmap(pix)
@@ -797,10 +828,11 @@ class MainWindow(QtWidgets.QMainWindow):
             return
         out = Path(path)
         sr = self.controls["sample_rate"].value()
-        write_xy_wav(out, self.last_result.x, self.last_result.y, sr)
-        np.savez(out.with_suffix(".npz"), x=self.last_result.x, y=self.last_result.y, sample_rate=sr)
+        xy = result_to_xybuffer(self.last_result, sr, self._projection_range())
+        write_xy_wav(out, xy.data[:, 0], xy.data[:, 1], sr)
+        np.savez(out.with_suffix(".npz"), x=xy.data[:, 0], y=xy.data[:, 1], sample_rate=sr)
         self.status.setText(f"Saved WAV: {out}")
-        total_samples = int(self.last_result.x.shape[0])
+        total_samples = int(xy.data.shape[0])
         duration_sec = total_samples / max(1, sr)
         self.export_info.setText(
             f"Last export: {total_samples} samples ({duration_sec:.3f} s @ {sr} Hz)"
@@ -828,7 +860,7 @@ class MainWindow(QtWidgets.QMainWindow):
         numeric_keys = [
             "dots_number", "density", "seed", "contrast_amount", "downsample_step", "pixel_step",
             "voronoi_iterations", "voronoi_lerp", "poisson_min_dist", "poisson_attempts", "sample_rate",
-            "points_per_second", "dot_dwell", "target_seconds", "tone_gamma", "tone_floor",
+            "points_per_second", "dot_dwell", "target_seconds", "projection_range", "tone_gamma", "tone_floor",
         ]
         bool_keys = ["use_contrast", "use_downsample", "optimize_path", "show_path"]
         combo_keys = ["resample_mode"]
@@ -840,6 +872,8 @@ class MainWindow(QtWidgets.QMainWindow):
                     w.setValue(int(params[k]))
                 else:
                     w.setValue(float(params[k]))
+        if "projection_box_size" in params and "projection_range" in c:
+            c["projection_range"].setValue(float(params["projection_box_size"]))
         for k in bool_keys:
             if k in params and k in c:
                 c[k].setChecked(bool(params[k]))
@@ -906,9 +940,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
             try:
                 result = compute_xy_for_image(path, params)
+                xy = result_to_xybuffer(result, params["sample_rate"], params["projection_range"])
                 out_wav = out_root / f"{path.stem}_stippling.wav"
-                write_xy_wav(out_wav, result.x, result.y, params["sample_rate"])
-                np.savez(out_wav.with_suffix(".npz"), x=result.x, y=result.y, sample_rate=params["sample_rate"])
+                write_xy_wav(out_wav, xy.data[:, 0], xy.data[:, 1], params["sample_rate"])
+                np.savez(out_wav.with_suffix(".npz"), x=xy.data[:, 0], y=xy.data[:, 1], sample_rate=params["sample_rate"])
                 done += 1
             except Exception as exc:
                 QtWidgets.QMessageBox.warning(self, "Batch warning", f"Failed: {path.name}\n{exc}")
