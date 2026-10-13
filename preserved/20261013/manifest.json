@@ -1,0 +1,498 @@
+[
+  {
+    "source": "8CH-audio-Teensy-4.0-HW-20260416_CAD_OUTPUT_v1/teensy_shield_90deg_L_bracket_only_v1.step",
+    "repo": "Teensy-4-galvos",
+    "blob": "89de42701dced5b1dcf07d0a9c2d1af0227f0bf3",
+    "size": 163489,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/89de42701dced5b1dcf07d0a9c2d1af0227f0bf3.step"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Mask.gts",
+    "repo": "Teensy-4-galvos",
+    "blob": "7203d85a8e7eda18f36b6fa6019c6e0c7ef4903c",
+    "size": 5890,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7203d85a8e7eda18f36b6fa6019c6e0c7ef4903c.gts"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos.drl",
+    "repo": "Teensy-4-galvos",
+    "blob": "df4887d532b755ca90027dfb8b68bc2305260b1b",
+    "size": 1359,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/df4887d532b755ca90027dfb8b68bc2305260b1b.drl"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Silkscreen.gbo",
+    "repo": "Teensy-4-galvos",
+    "blob": "1475e71629b05383d274255f1963fb54e63c0db3",
+    "size": 461,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/1475e71629b05383d274255f1963fb54e63c0db3.gbo"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Silkscreen.gto",
+    "repo": "Teensy-4-galvos",
+    "blob": "f50cc4754d269e7088143e7a8db9f03aec2dcea3",
+    "size": 70127,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/f50cc4754d269e7088143e7a8db9f03aec2dcea3.gto"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-job.gbrjob",
+    "repo": "Teensy-4-galvos",
+    "blob": "718a8d403efba1eba8673f57c73790df4bb4a3d8",
+    "size": 2762,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/718a8d403efba1eba8673f57c73790df4bb4a3d8.gbrjob"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-drl_map.gbr",
+    "repo": "Teensy-4-galvos",
+    "blob": "2c061d0beadfa32b56aeb1237baf71880424a6ef",
+    "size": 89638,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/2c061d0beadfa32b56aeb1237baf71880424a6ef.gbr"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Paste.gtp",
+    "repo": "Teensy-4-galvos",
+    "blob": "08c51e570d9cd909606450a864cde3b257d8076c",
+    "size": 4190,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/08c51e570d9cd909606450a864cde3b257d8076c.gtp"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-Edge_Cuts.gm1",
+    "repo": "Teensy-4-galvos",
+    "blob": "36802fc8d3e5580b9c9cb230694f54aefa11b160",
+    "size": 1208,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/36802fc8d3e5580b9c9cb230694f54aefa11b160.gm1"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Paste.gbp",
+    "repo": "Teensy-4-galvos",
+    "blob": "08b35cd4588573b7f17527960752ee83f130ba0e",
+    "size": 460,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/08b35cd4588573b7f17527960752ee83f130ba0e.gbp"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Mask.gbs",
+    "repo": "Teensy-4-galvos",
+    "blob": "5598ee0e22fe75f8831e36b83d5838f3830962b7",
+    "size": 2722,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/5598ee0e22fe75f8831e36b83d5838f3830962b7.gbs"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Cu.gtl",
+    "repo": "Teensy-4-galvos",
+    "blob": "15c29f7b2755ce7f263a82d68daeeaa28ea5585e",
+    "size": 21862,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/15c29f7b2755ce7f263a82d68daeeaa28ea5585e.gtl"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Cu.gbl",
+    "repo": "Teensy-4-galvos",
+    "blob": "fea73025974d8e1678611ed7458bf3df96ca2505",
+    "size": 86573,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/fea73025974d8e1678611ed7458bf3df96ca2505.gbl"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/bom/teensy-4-galvos-ibom.html",
+    "repo": "Teensy-4-galvos",
+    "blob": "88c747992d3e0592358ae8da75f08fef648d8f88",
+    "size": 268906,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/88c747992d3e0592358ae8da75f08fef648d8f88.html"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/.history/.gitignore",
+    "repo": "Teensy-4-galvos",
+    "blob": "f43de06b4fff32ac04b36d67b705864f6f926f88",
+    "size": 87,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/f43de06b4fff32ac04b36d67b705864f6f926f88"
+  },
+  {
+    "source": "Teensy-4-galvos-main/kicad/.history/README.txt",
+    "repo": "Teensy-4-galvos",
+    "blob": "6aed0ee88e381d20f53cad2cc4663c2f057dd7a7",
+    "size": 554,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/6aed0ee88e381d20f53cad2cc4663c2f057dd7a7.txt"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "32413cb0984e8489f95f745f3a209209165c456a",
+    "size": 17390,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/32413cb0984e8489f95f745f3a209209165c456a.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/.history/teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "687d61f335aea0bfbf1155cc3885567413b9a862",
+    "size": 606781,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/687d61f335aea0bfbf1155cc3885567413b9a862.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/.history/.gitignore",
+    "repo": "Teensy-4-galvos",
+    "blob": "f43de06b4fff32ac04b36d67b705864f6f926f88",
+    "size": 87,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/f43de06b4fff32ac04b36d67b705864f6f926f88"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/.history/README.txt",
+    "repo": "Teensy-4-galvos",
+    "blob": "6aed0ee88e381d20f53cad2cc4663c2f057dd7a7",
+    "size": 554,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/6aed0ee88e381d20f53cad2cc4663c2f057dd7a7.txt"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "c72772005ba54a913dbab932db9f1317796a4b84",
+    "size": 562435,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/c72772005ba54a913dbab932db9f1317796a4b84.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "a7547539e52c307212f27762a98ffa23706c71b3",
+    "size": 15479,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/a7547539e52c307212f27762a98ffa23706c71b3.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!teensy-4-galvos.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "ba53703d4001e83e35aceeda3b43d5062a972f68",
+    "size": 96899,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/ba53703d4001e83e35aceeda3b43d5062a972f68.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!TL072.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "7360e13e55b4af936cf6ec2995c929d4a07e7e51",
+    "size": 82377,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7360e13e55b4af936cf6ec2995c929d4a07e7e51.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!_autosave-teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "fb2f39598fdce12e7f699f7fb16a019d386d23f9",
+    "size": 578525,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/fb2f39598fdce12e7f699f7fb16a019d386d23f9.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "c533785fffca8022d17a7b580050934639427caf",
+    "size": 615315,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/c533785fffca8022d17a7b580050934639427caf.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "1803071e642e9b563d28727adefab51c32d54e2a",
+    "size": 15555,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/1803071e642e9b563d28727adefab51c32d54e2a.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!teensy-4-galvos.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "ba53703d4001e83e35aceeda3b43d5062a972f68",
+    "size": 96899,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/ba53703d4001e83e35aceeda3b43d5062a972f68.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!TL072.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "7360e13e55b4af936cf6ec2995c929d4a07e7e51",
+    "size": 82377,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7360e13e55b4af936cf6ec2995c929d4a07e7e51.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!_autosave-teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "2ce169bb8307f979979aefc356c5cd6d00569727",
+    "size": 591340,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/2ce169bb8307f979979aefc356c5cd6d00569727.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "c72772005ba54a913dbab932db9f1317796a4b84",
+    "size": 562435,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/c72772005ba54a913dbab932db9f1317796a4b84.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "a7547539e52c307212f27762a98ffa23706c71b3",
+    "size": 15479,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/a7547539e52c307212f27762a98ffa23706c71b3.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!teensy-4-galvos.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "ba53703d4001e83e35aceeda3b43d5062a972f68",
+    "size": 96899,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/ba53703d4001e83e35aceeda3b43d5062a972f68.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!TL072.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "7360e13e55b4af936cf6ec2995c929d4a07e7e51",
+    "size": 82377,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7360e13e55b4af936cf6ec2995c929d4a07e7e51.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad-2025-04-30/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!_autosave-teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "2ce169bb8307f979979aefc356c5cd6d00569727",
+    "size": 591340,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/2ce169bb8307f979979aefc356c5cd6d00569727.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Mask.gts",
+    "repo": "Teensy-4-galvos",
+    "blob": "7203d85a8e7eda18f36b6fa6019c6e0c7ef4903c",
+    "size": 5890,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7203d85a8e7eda18f36b6fa6019c6e0c7ef4903c.gts"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos.drl",
+    "repo": "Teensy-4-galvos",
+    "blob": "df4887d532b755ca90027dfb8b68bc2305260b1b",
+    "size": 1359,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/df4887d532b755ca90027dfb8b68bc2305260b1b.drl"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Silkscreen.gbo",
+    "repo": "Teensy-4-galvos",
+    "blob": "1475e71629b05383d274255f1963fb54e63c0db3",
+    "size": 461,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/1475e71629b05383d274255f1963fb54e63c0db3.gbo"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Silkscreen.gto",
+    "repo": "Teensy-4-galvos",
+    "blob": "f50cc4754d269e7088143e7a8db9f03aec2dcea3",
+    "size": 70127,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/f50cc4754d269e7088143e7a8db9f03aec2dcea3.gto"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-job.gbrjob",
+    "repo": "Teensy-4-galvos",
+    "blob": "718a8d403efba1eba8673f57c73790df4bb4a3d8",
+    "size": 2762,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/718a8d403efba1eba8673f57c73790df4bb4a3d8.gbrjob"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-drl_map.gbr",
+    "repo": "Teensy-4-galvos",
+    "blob": "2c061d0beadfa32b56aeb1237baf71880424a6ef",
+    "size": 89638,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/2c061d0beadfa32b56aeb1237baf71880424a6ef.gbr"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Paste.gtp",
+    "repo": "Teensy-4-galvos",
+    "blob": "08c51e570d9cd909606450a864cde3b257d8076c",
+    "size": 4190,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/08c51e570d9cd909606450a864cde3b257d8076c.gtp"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-Edge_Cuts.gm1",
+    "repo": "Teensy-4-galvos",
+    "blob": "36802fc8d3e5580b9c9cb230694f54aefa11b160",
+    "size": 1208,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/36802fc8d3e5580b9c9cb230694f54aefa11b160.gm1"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Paste.gbp",
+    "repo": "Teensy-4-galvos",
+    "blob": "08b35cd4588573b7f17527960752ee83f130ba0e",
+    "size": 460,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/08b35cd4588573b7f17527960752ee83f130ba0e.gbp"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Mask.gbs",
+    "repo": "Teensy-4-galvos",
+    "blob": "5598ee0e22fe75f8831e36b83d5838f3830962b7",
+    "size": 2722,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/5598ee0e22fe75f8831e36b83d5838f3830962b7.gbs"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-F_Cu.gtl",
+    "repo": "Teensy-4-galvos",
+    "blob": "15c29f7b2755ce7f263a82d68daeeaa28ea5585e",
+    "size": 21862,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/15c29f7b2755ce7f263a82d68daeeaa28ea5585e.gtl"
+  },
+  {
+    "source": "Teensy-4-galvos-kicad-compare/kicad/teensy-4-galvos-jlcpcb.zip!teensy-4-galvos-B_Cu.gbl",
+    "repo": "Teensy-4-galvos",
+    "blob": "fea73025974d8e1678611ed7458bf3df96ca2505",
+    "size": 86573,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/fea73025974d8e1678611ed7458bf3df96ca2505.gbl"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "c72772005ba54a913dbab932db9f1317796a4b84",
+    "size": 562435,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/c72772005ba54a913dbab932db9f1317796a4b84.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "a7547539e52c307212f27762a98ffa23706c71b3",
+    "size": 15479,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/a7547539e52c307212f27762a98ffa23706c71b3.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!teensy-4-galvos.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "ba53703d4001e83e35aceeda3b43d5062a972f68",
+    "size": 96899,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/ba53703d4001e83e35aceeda3b43d5062a972f68.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!TL072.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "7360e13e55b4af936cf6ec2995c929d4a07e7e51",
+    "size": 82377,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7360e13e55b4af936cf6ec2995c929d4a07e7e51.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_114358.zip!_autosave-teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "fb2f39598fdce12e7f699f7fb16a019d386d23f9",
+    "size": 578525,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/fb2f39598fdce12e7f699f7fb16a019d386d23f9.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "c72772005ba54a913dbab932db9f1317796a4b84",
+    "size": 562435,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/c72772005ba54a913dbab932db9f1317796a4b84.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "a7547539e52c307212f27762a98ffa23706c71b3",
+    "size": 15479,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/a7547539e52c307212f27762a98ffa23706c71b3.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!teensy-4-galvos.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "ba53703d4001e83e35aceeda3b43d5062a972f68",
+    "size": 96899,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/ba53703d4001e83e35aceeda3b43d5062a972f68.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!TL072.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "7360e13e55b4af936cf6ec2995c929d4a07e7e51",
+    "size": 82377,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7360e13e55b4af936cf6ec2995c929d4a07e7e51.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_115649.zip!_autosave-teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "2ce169bb8307f979979aefc356c5cd6d00569727",
+    "size": 591340,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/2ce169bb8307f979979aefc356c5cd6d00569727.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "c533785fffca8022d17a7b580050934639427caf",
+    "size": 615315,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/c533785fffca8022d17a7b580050934639427caf.kicad_pcb"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!teensy-4-galvos.kicad_pro",
+    "repo": "Teensy-4-galvos",
+    "blob": "1803071e642e9b563d28727adefab51c32d54e2a",
+    "size": 15555,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/1803071e642e9b563d28727adefab51c32d54e2a.kicad_pro"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!teensy-4-galvos.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "ba53703d4001e83e35aceeda3b43d5062a972f68",
+    "size": 96899,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/ba53703d4001e83e35aceeda3b43d5062a972f68.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!TL072.kicad_sch",
+    "repo": "Teensy-4-galvos",
+    "blob": "7360e13e55b4af936cf6ec2995c929d4a07e7e51",
+    "size": 82377,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/7360e13e55b4af936cf6ec2995c929d4a07e7e51.kicad_sch"
+  },
+  {
+    "source": "Teensy-4-galvos-main.zip!Teensy-4-galvos-main/kicad/teensy-4-galvos-backups/teensy-4-galvos-2025-04-20_120603.zip!_autosave-teensy-4-galvos.kicad_pcb",
+    "repo": "Teensy-4-galvos",
+    "blob": "2ce169bb8307f979979aefc356c5cd6d00569727",
+    "size": 591340,
+    "status": "staged",
+    "remote_path": "preserved/20261013/objects/2ce169bb8307f979979aefc356c5cd6d00569727.kicad_pcb"
+  }
+]
